@@ -1,11 +1,13 @@
 import './App.css'
 import Navbar from './Components/Navbar'
+import Dashboard from './Pages/Dashboard'
 
 function App() {
   
   return (
     <>
       <Navbar/>
+      <Dashboard/>
     </>
   )
 }

@@ -4,4 +4,30 @@
 
 *{
   font-family: 'Pathway Extreme', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  overflow: hidden;
+}
+#logo{
+  font-weight: 800;
+}
+#menu{
+  animation-name: SlideIn;
+  animation-duration: 0.5s;
+}
+@keyframes SlideIn {
+  0%{
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
