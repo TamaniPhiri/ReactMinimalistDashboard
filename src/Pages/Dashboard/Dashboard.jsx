@@ -1,10 +1,12 @@
-import { data } from "../Constants/Data";
-import Header from "./Dashboard/Components/Header";
+import { data } from "../../Constants/Data";
+import Header from "./Components/Header";
+
 const Dashboard = () => {
+
   return (
-    <div className="flex w-full flex-col text-sm px-4 md:px-16 items-center">
-        <Header/>
-        
+    <div className="flex w-full flex-col text-sm px-4 md:px-8 items-center">
+      <Header />
+
       {/* Users Card */}
       {data.map((item, index) => (
         <div className="flex w-full py-3 border-t" key={index}>
@@ -39,7 +41,7 @@ const Dashboard = () => {
                   <p>{item.status}</p>
                 </div>
               ) : (
-                <div className="items-center justify-evenly flex px-2 gap-1">
+                <div className="items-center py-[1px] justify-evenly border-gray-600 rounded-lg border-[1.5px] flex px-2 gap-1">
                   <div className="w-[0.5em] h-[0.5em] bg-black rounded-full">
                     {/*Activity Dot*/}
                   </div>
@@ -55,6 +57,7 @@ const Dashboard = () => {
 
             {/* Teams column */}
             <div className="flex w-[22%] justify-between items-center">
+              {/* Teams */}
               <div className="flex gap-1">
                 {item.team.map((teamMember, teamIndex) => (
                   <p
@@ -65,27 +68,46 @@ const Dashboard = () => {
                   </p>
                 ))}
               </div>
-              <div className="flex gap-1">
-                <button>
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                  >
-                    <path d="M9.5 13a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                  </svg>
-                </button>
-                <button>
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 16 16"
-                    height="1em"
-                    width="1em"
-                  >
-                    <path d="M9.5 13a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-                  </svg>
-                </button>
+
+              {/* Right dots menu */}
+              <div className="flex gap-1 items-center">
+
+                {/* Pen Icon */}
+                <div>
+                  <button className="rounded-full hover:bg-gray-300 p-1">
+                    <svg
+                      viewBox="0 0 21 21"
+                      fill="currentColor"
+                      height="1.3em"
+                      width="1.3em"
+                    >
+                      <g
+                        fill="none"
+                        fillRule="evenodd"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M17 4a2.121 2.121 0 010 3l-9.5 9.5-4 1 1-3.944 9.504-9.552a2.116 2.116 0 012.864-.125zM9.5 17.5h8M15.5 6.5l1 1" />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+                
+                {/*Vertical Dots Icon*/}
+                <div className="flex">
+                  <button className="rounded-full hover:bg-gray-300 p-1">
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                      height="1.3em"
+                      width="1.3em"
+                    >
+                      <path d="M9.5 13a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm0-5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                    </svg>
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>

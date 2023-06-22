@@ -7,7 +7,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex flex-row shadow-sm top-0 sticky w-full py-4 justify-between items-center px-4 md:px-16">
+    <div className="flex flex-row shadow-sm top-0 sticky w-full py-4 justify-between items-center px-4 md:px-8">
       {/*Logo*/}
       <div className="items-center">
         <h1 id="logo" className="text-md md:text-xl">
@@ -87,11 +87,10 @@ const Navbar = () => {
           )}
         </button>
         {open ? (
-          <div
-            id="menu"
-            className="top-16 right-0 h-screen w-1/2 bg-white shadow-xl absolute"
-          >
+          <div id="menu" className="top-16 right-0 h-screen w-1/2 bg-white shadow-xl absolute">
+            {/*Mobile Menu List */}
             <ul className=" p-4 gap-2 flex flex-col">
+              {/* Search input */}
               <li>
                 <div className="items-center bg-gray-300 text-gray-500 overflow-hidden rounded-md">
                   <div className="flex items-center p-1">
@@ -114,6 +113,8 @@ const Navbar = () => {
                   </div>
                 </div>
               </li>
+
+              {/* Download CSV */}
               <li>
                 <div className="items-center text-sm font-semibold text-gray-800">
                   <button className="w-full px-3 justify-center items-center flex gap-1 p-1 hover:bg-gray-300 rounded-md border-gray-300 border-[0.1em]">
@@ -133,6 +134,8 @@ const Navbar = () => {
                   </button>
                 </div>
               </li>
+
+              {/* Add user */}
               <li>
                 <div className="items-center text-sm font-semibold text-white">
                   <button className="w-full px-3 justify-center text-center items-center bg-gray-900 flex gap-1 p-1 hover:bg-gray-700 rounded-md">
@@ -140,6 +143,7 @@ const Navbar = () => {
                   </button>
                 </div>
               </li>
+
             </ul>
           </div>
         ) : null}

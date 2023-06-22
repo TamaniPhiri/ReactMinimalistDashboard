@@ -32,21 +32,21 @@ export const data = [
       name: { username: 'James Wilson', alias: '@james' },
       status: 'online',
       email: 'james@gmail.com',
-      team: ['Engineering', 'Operations']
+      team: ['Engineering']
     },
     {
       image: 'https://images.pexels.com/photos/4323330/pexels-photo-4323330.jpeg?auto=compress&cs=tinysrgb&w=600',
       name: { username: 'Ava Martinez', alias: '@ava' },
       status: 'offline',
       email: 'ava@gmail.com',
-      team: ['Product', 'Design']
+      team: ['Product']
     },
     {
       image: 'https://images.pexels.com/photos/2179241/pexels-photo-2179241.jpeg?auto=compress&cs=tinysrgb&w=600',
       name: { username: 'Liam Brown', alias: '@liam' },
       status: 'active',
       email: 'liam@gmail.com',
-      team: ['Operations', 'Engineering']
+      team: ['Operations', 'sales']
     }
   ];
   
