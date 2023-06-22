@@ -62,7 +62,7 @@ const Dashboard = () => {
                 {item.team.map((teamMember, teamIndex) => (
                   <p
                     key={teamIndex}
-                    className="border-gray-600 px-2 border-[1.5px] rounded-lg"
+                    className="border-gray-600 px-2 py-[1px] border-[1.5px] rounded-lg"
                   >
                     {teamMember}
                   </p>
